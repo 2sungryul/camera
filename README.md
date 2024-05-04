@@ -1,7 +1,7 @@
 # camera
 CSI camera test ros2 package on Jetson nano
 
-Publisher node captures an image from csi camera and publishes a compressed image topic with jpg format using a ros2 interface sensor_msgs/msg/CompressedImage.
+Publisher node captures an image from csi camera via gstreamer and publishes a compressed image topic with jpg format using a ros2 interface sensor_msgs/msg/CompressedImage.
 
 Subscriber node subscribes the compressed image topic and sends it to PC via gstreamer.
 
