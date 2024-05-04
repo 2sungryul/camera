@@ -1,5 +1,5 @@
 # camera
-CSI camera test ros2 package on Jetson nano
+CSI camera ros2 test package on Jetson nano
 
 dependency : ros2 foxy, gstreamer, opencv 4.8, cmake 3.16
 
