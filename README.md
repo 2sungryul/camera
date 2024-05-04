@@ -4,11 +4,17 @@ Publisher node publishes a compressed image topic with jpg format using a ros2 i
 Subscriber node subscribes a compressed image topic and sends it to PC via gstreamer.
 
 Open linux terminal on Jetson nano
+
 $ cd ~/ros2_ws/src
+
 $ git clone https://github.com/2sungryul/camera.git
+
 $ cd ~/ros2_ws
+
 $ colcon build --symlink-install --packages-select camera
+
 $ source install/local_setup.bash
+
 $ ros2 run camera pub
 
 Open new linux terminal on Jetson nano
