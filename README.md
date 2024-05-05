@@ -1,5 +1,5 @@
 # camera
-CSI camera ros2 test package on Jetson nano
+ros2 test package for CSI camera on Jetson nano
 
 dependency : ros2 foxy, gstreamer, opencv 4.8, cmake 3.16
 
@@ -33,6 +33,6 @@ PS> gst-launch-1.0 -v udpsrc port=8001 ! ‘application/x-rtp,encoding-name=(str
 
 ![image](https://github.com/2sungryul/camera/assets/67367753/61171e79-f093-441a-ad77-ae4f7b8adc19)
 
-Gstreamer command on Linux for video streaming from csi camera
+Gstreamer command for video streaming from csi camera on Linux 
 
 $ gst-launch-1.0 nvarguscamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM),format=NV12,width=640,height=360' ! nvvidconv flip-method=0 ! nvv4l2h264enc insert-sps-pps=true ! h264parse ! rtph264pay pt=96 ! udpsink host=203.234.58.121 port=8001 sync=false -q
