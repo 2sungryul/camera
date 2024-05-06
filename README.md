@@ -37,11 +37,11 @@ Gstreamer command for video streaming from csi camera on Linux
 
 $ gst-launch-1.0 nvarguscamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM),format=NV12,width=640,height=360' ! nvvidconv flip-method=0 ! nvv4l2h264enc insert-sps-pps=true ! h264parse ! rtph264pay pt=96 ! udpsink host=203.234.58.121 port=8001 sync=false -q
 
-How to configure Virtual Switch onf Hyper-V 
+How to configure Virtual Switch on Hyper-V 
 
 ![image](https://github.com/2sungryul/camera/assets/67367753/273c7a3c-af2d-40ac-a0fe-ae18f5b98443)
 
-How to configure .wslconfig for WSL2
+How to make .wslconfig for WSL2
 
 ![image](https://github.com/2sungryul/camera/assets/67367753/1bf746e9-707b-416a-9987-02c689287da6)
 
