@@ -25,7 +25,7 @@ $ ros2 run camera pub
 
 Open new linux terminal on Jetson nano
 
-$ ros2 run camera sub
+$ ros2 run camera sub_jetson
 
 Open windows powershell on PC
 
