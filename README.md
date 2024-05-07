@@ -4,7 +4,6 @@ ros2 test package for CSI camera on Jetson nano
 dependency : ros2 foxy, gstreamer, opencv 4.8, cmake 3.16
 
 Publisher node captures an image from csi camera via gstreamer and publishes a compressed image topic with jpg format using a ros2 interface sensor_msgs/msg/CompressedImage.
-
 Subscriber node subscribes the compressed image topic and sends it to PC via gstreamer.
 
 Open linux terminal on Jetson nano
