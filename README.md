@@ -33,6 +33,22 @@ PS> gst-launch-1.0 -v udpsrc port=8001 ! ‘application/x-rtp,encoding-name=(str
 
 ![image](https://github.com/2sungryul/camera/assets/67367753/61171e79-f093-441a-ad77-ae4f7b8adc19)
 
+Open linux terminal on WSL2
+
+$ cd ~/ros2_ws/src
+
+$ git clone https://github.com/2sungryul/camera.git
+
+$ cd ~/ros2_ws
+
+$ colcon build --symlink-install --packages-select camera
+
+$ source install/local_setup.bash
+
+$ ros2 run camera sub_wsl
+
+![image](https://github.com/2sungryul/camera/assets/67367753/6f54ffa5-abcf-4848-95ed-68e45e195c46)
+
 Gstreamer command for video streaming from csi camera on Linux 
 
 $ gst-launch-1.0 nvarguscamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM),format=NV12,width=640,height=360' ! nvvidconv flip-method=0 ! nvv4l2h264enc insert-sps-pps=true ! h264parse ! rtph264pay pt=96 ! udpsink host=203.234.58.121 port=8001 sync=false -q
