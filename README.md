@@ -12,8 +12,6 @@ $ cd ~/ros2_ws/src
 
 $ git clone https://github.com/2sungryul/camera.git
 
-Make sure you need to change the ip address in sub.cpp to that of your own PC.
-
 $ cd ~/ros2_ws
 
 $ colcon build --symlink-install --packages-select camera
